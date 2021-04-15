@@ -11,6 +11,46 @@
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <h1>YOUR GAME HERE!</h1>
-</body>
+    <header>
+      <h1>YOUR GAME HERE!</h1>
+    </header>
+    <main>
+      <section>
+        <form>
+          <input id="player-one" type="text" placeholder="Player 1">
+          <input id="player-two" type="text" placeholder="Player 2">
+          <button id="submit-guesses">Submit Guesses</button>
+        </form>
+    </section>
+    <section>
+      <div>
+        <h2>Round Number: <span id="round-value">Value</span></h2>
+        <h3>Previous Guesses</h3>
+          <table>
+            <thead>
+              <tr>
+                <td>Player One</td>
+                <td>Player Two</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </section>
+    </main>
+    <footer>
+      <p>&copy; 2021 RRN &amp; SAE</p>
+    </footer>
+  </body>
 </html>
+
+<!-- [X] add input fields for each player's guess -->
+<!-- [X] add submit button that submits all guesses at once-->
+<!-- [X] total guesses made indicator (how many rounds of guesses)-->
+<!-- [X]details area for the history of quesses for each player 
+       (tell them if guess is too low or too high)  -->
