@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-      <h1>YOUR GAME HERE!</h1>
+      <h1>Random Number Guessing Game!</h1>
     </header>
     <main>
       <section>
@@ -25,21 +25,29 @@
     <section>
       <div>
         <h2>Round Number: <span id="round-value">Value</span></h2>
-        <h3>Previous Guesses</h3>
+        <!-- <h3>Previous Guess</h3> -->
           <table>
             <thead>
+              <tr>Previous Guess</tr>
               <tr>
-                <td>Player One</td>
-                <td>Player Two</td>
+                <td>P One</td>
+                <td>High/Low</td>
+                <td>P Two</td>
+                <td>High/Low</td>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>0</td>
+                <td>H/L</td>
                 <td>1</td>
+                <td>H/L</td>
               </tr>
             </tbody>
           </table>
+      </div>
+      <div>
+        <button id="restart-button">Restart</button>
       </div>
     </section>
     </main>
