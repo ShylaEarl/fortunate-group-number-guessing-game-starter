@@ -26,7 +26,7 @@ function matchGuess(){
   .then(function (response){
     console.log('Added guesses');
     //changed data on server, get all updates
-    //getNewGuesses();
+    getNewGuesses();
   })
   .catch(function(error){
     console.log('Error from server', error);
@@ -39,7 +39,20 @@ function matchGuess(){
 
 }//end matchGuess
 
-
+function getNewGuesses(){
+  $.ajax({
+    method: 'GET',
+    url:'/guesses',
+  })
+  .then(function(response){
+    console.log('response from server', response);
+    //render(response);
+  })
+  .catch(function(error){
+    console.log('Error from server', error);
+    alert('Cannot get guesses. Try again later.')
+  })
+}//end getNewGuesses
 
 // if(player1Guess === Math.floor(Math.random() * (1 + max - min) + min)){ 
 //   return alert(`Player 1, you guessed it!!`);
