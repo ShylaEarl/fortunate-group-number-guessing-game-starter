@@ -2,8 +2,9 @@ $(document).ready(handleReady);
 
 function handleReady() {
   console.log("jquery is loaded!");
-  //randomNumber(1, 25);
+  // randomNumber(1, 25);
   $('#submit-guesses').on('click', matchGuess);
+  getNewGuesses();
   
 }//end handleReady
 
@@ -54,6 +55,18 @@ function getNewGuesses(){
   })
 }//end getNewGuesses
 
+function render(){
+  $('.render-guesses').empty();
+  for(let item of guessHistory){
+    $('.render-guesses').append(`
+      <td>${item.player1Guess}</td>
+      <td>H/L</td>
+      <td>${item.player2Guess}</td>
+      <td>H/L</td>
+    `);
+  }//end for loop
+}//end render
+
 // if(player1Guess === Math.floor(Math.random() * (1 + max - min) + min)){ 
 //   return alert(`Player 1, you guessed it!!`);
 // } else if (player1Guess > Math.floor(Math.random() * (1 + max - min) + min)){
@@ -74,6 +87,6 @@ function getNewGuesses(){
 //    return Math.floor(Math.random() * (1 + max - min) + min);
 // }//end randomNumber
 
-//console.log('random number', randomNumber(1, 25));
+// console.log('random number', randomNumber(1, 25));
 
 
